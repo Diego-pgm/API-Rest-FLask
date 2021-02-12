@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tiendas</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    {% for tienda in tiendas %}
+        <li>{{tienda.id_tienda}} | {{tienda.nombre_tienda}} | {{tienda.dir_tienda}} | {{tienda.inventario}}</li>
+    {% endfor %} 
+    <p><form>
+        <label>Ver inventario de la tienda: </label>
+        <input id="nombre" name="nombre" type="text"/></p>
+        <input type="submit"> 
+    </form></p>
+
+    <form method="post" action="/agregar_tienda">
+        <label>Agregar Tienda</label><br>
+        <p></p><label>Nombre Tienda:</label>
+        <input id="nombre_tienda" name="nombre_tienda" type="text"/></p>
+        <p><label>Direccion Tienda:</label>
+        <input id="dir_tienda" name="dir_tienda" type="text"/></p>
+        <p><label>ID inventario:</label>
+        <input id="id_inventario" name="id_inventario" type="number"/></p>
+        <input type="submit" value="Agregar Tienda">
+    </form><br>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventarios</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    {% for inventario in inventarios %}
+        <li>{{inventario.id_inventario}} | {{inventario.id_tienda}} | {{inventario.id_producto}}</li>
+    {% endfor %} 
+
+    <form method="post" action="/agregar_inventario">
+        <p><label>Agregar Inventario</label>
+        <p><label>ID Inventario:</label>
+        <input id="id_inventario" name="id_inventario" type="number"/></p>
+        <p><label>ID Tienda:</label>
+        <input id="id_tienda" name="id_tienda" type="number"/></p>
+        <input type="submit" value="Agregar inventario"><br></p>
+    </form>
+
+    <form method="post" action="/agregar_inventario">
+        <label>Agregar Producto</label><br>
+        <p></p><label>ID Producto:</label>
+        <input id="id_producto" name="id_producto" type="text"/></p>
+        <p><label>Nombre producto:</label>
+        <input id="nombre" name="nombre" type="text"/></p>
+        <p><label>Cantidad:</label>
+        <input id="stock" name="sku" type="cantidad"/></p>
+        <p><label>ID Inventario</label>
+        <input id="id_inventario" name=id_inventario type="number"></p>
+        <input type="submit" value="Agregar Producto">
+    </form>
+
+
+</body>
+</html>

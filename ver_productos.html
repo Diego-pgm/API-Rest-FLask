@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Productos</title>
+    <meta charset="utf-8">
+</head>
+<body>
+
+    {% for producto in productos %}
+        <li>{{producto.id_producto}} | {{producto.nombre}} | {{producto.precio}} | {{producto.sku}} | {{producto.id_inventario}}</li>
+    {% endfor %} 
+    <form method="post" action="/agregar_producto">
+        <label>Agregar Producto</label><br>
+        <p></p><label>ID Producto:</label>
+        <input id="id_producto" name="id_producto" type="text"/></p>
+        <p><label>Nombre producto:</label>
+        <input id="nombre" name="nombre" type="text"/></p>
+        <p><label>Precio producto:</label>
+        <input id="precio" name="precio" type="number"/></p>
+        <p><label>SKU:</label>
+        <input id="sku" name="sku" type="text"/></p>
+        <p><label>ID Inventario</label>
+        <input id="id_inventario" name=id_inventario type="number"></p>
+        <p><label>Cantidad a agregar</label>
+        <input id="stock" name=stock type="number"></p>
+        <input type="submit" value="Agregar Producto">
+
+    </form>
+</body>
+</html>
